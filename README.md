@@ -13,6 +13,14 @@ After you've done that, you have some editing / refactoring to do. Depending on 
 
 4. Run the tests. There should be one test and it should pass. If that happens, you know you at least haven't broken the test setup and should be ready to start building something great.
 
+### Linting and Testing
+
+```shell script
+composer test:unit # Runs PHPUnit
+composer lint # Runs php-cs-fixer to fix your coding style
+composer test # Runs lint and then test:unit 
+```
+
 ### Acknowledgements
 
 I started off writing packages with the help of Marcel Pociot's excellent [Laravel Package Boilerplate](https://laravelpackageboilerplate.com/#/) and I purchased and used his course on package development. Without those two things I'd never have gotten to be nearly as proficient in package develpment as I am. If you are just starting out, I strongly recommend using those vs using this template or starting from scratch.

@@ -13,10 +13,10 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.3",
-        "illuminate/support": "^6.0|^7.0"
+        "illuminate/support": "^7.0|^8.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.6",
+        "orchestra/testbench": "^5.0",
         "friendsofphp/php-cs-fixer": "^2.16"
     },
     "autoload": {
@@ -34,5 +34,13 @@
         "laravel": {
             "providers": "Grosv\\LaravelPackageTemplate\\LaravelPackageTemplateProvider"
         }
+    },
+    "scripts": {
+        "lint": "php-cs-fixer fix -v",
+        "test:unit": "phpunit",
+        "test": [
+            "@lint",
+            "@test:unit"
+        ]
     }
 }
